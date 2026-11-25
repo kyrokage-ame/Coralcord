@@ -1,0 +1,14 @@
+name: Coralcord arm64 (template — see .github/workflows/build-arm64.yml)
+
+on:
+  workflow_dispatch:
+
+# GitHub Actions does not discover nested YAML here. The runnable workflow is
+# mirrored under .github/workflows and invokes scripts from this directory.
+jobs:
+  source:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build arm64 IPA on Linux
+        run: bash .github/Workflow/arm64/build-linux.sh

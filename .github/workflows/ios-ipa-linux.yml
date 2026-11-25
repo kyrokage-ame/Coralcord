@@ -1,0 +1,29 @@
+name: Linux arm64 IPA (Theos)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+
+jobs:
+  build-ipa:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install native dependency build tools
+        run: sudo apt-get update && sudo apt-get install -y cmake ninja-build
+      - name: Install Theos with Swift toolchain and iOS SDK
+        shell: bash
+        run: |
+          printf 'y\n' | env -u CI bash -c "$(curl -fsSL https://raw.githubusercontent.com/theos/theos/master/bin/install-theos)"
+          echo "THEOS=$HOME/theos" >> "$GITHUB_ENV"
+          echo "$HOME/theos/toolchain/linux/host/bin" >> "$GITHUB_PATH"
+          echo "$HOME/theos/toolchain/linux/iphone/bin" >> "$GITHUB_PATH"
+      - name: Build arm64 IPA
+        run: make package -j2
+      - name: Upload IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: Coralcord-arm64-IPA
+          path: packages/*.ipa
+          if-no-files-found: error

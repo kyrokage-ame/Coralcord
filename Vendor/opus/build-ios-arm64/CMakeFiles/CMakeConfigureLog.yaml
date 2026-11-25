@@ -1,0 +1,706 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:228 (message)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      The target system is: iOS -  - 
+      The host system is: Linux - 6.18.38+ - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /home/ubuntu/theos/toolchain/linux/iphone/bin/clang-13 
+      Build flags: -O2;-isysroot;/home/ubuntu/theos/sdks/iPhoneOS15.6.sdk;-miphoneos-version-min=15.0
+      Id flags: -c;--target=arm64-apple-ios15.0 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is Clang, found in:
+        /home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:7 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-9P2fv0"
+      binary: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-9P2fv0"
+    cmakeVariables:
+      CMAKE_C_COMPILER_TARGET: "arm64-apple-ios15.0"
+      CMAKE_C_FLAGS: "-O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ubuntu/cordial/Vendor/opus/upstream/cmake"
+      CMAKE_OSX_ARCHITECTURES: "arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "15.0"
+      CMAKE_OSX_SYSROOT: "/home/ubuntu/theos/sdks/iPhoneOS15.6.sdk"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-9P2fv0'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_080ec
+        [1/2] /home/ubuntu/theos/toolchain/linux/iphone/bin/clang-13 --target=arm64-apple-ios15.0   -O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0  -arch arm64 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0   -v -Wl,-v -MD -MT CMakeFiles/cmTC_080ec.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_080ec.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_080ec.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        clang version 13.0.0 (https://github.com/apple/llvm-project.git f0fb631dd1a3a2988b23ba5057cd9106713cd0b4)
+        Target: arm64-apple-ios15.0
+        Thread model: posix
+        InstalledDir: /home/ubuntu/theos/toolchain/linux/iphone/bin
+        clang-13: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+         (in-process)
+         "/home/ubuntu/theos/toolchain/linux/host/bin/clang-13" -cc1 -triple arm64-apple-ios15.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=2 -target-sdk-version=15.5 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -target-cpu apple-a7 -target-feature +v8a -target-feature +crypto -target-feature +fp-armv8 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -v -fcoverage-compilation-dir=/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-9P2fv0 -resource-dir /home/ubuntu/theos/toolchain/linux/host/lib/clang/13.0.0 -dependency-file CMakeFiles/cmTC_080ec.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_080ec.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -internal-isystem /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk/usr/local/include -internal-isystem /home/ubuntu/theos/toolchain/linux/host/lib/clang/13.0.0/include -internal-externc-isystem /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk/usr/include -O2 -fdebug-compilation-dir=/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-9P2fv0 -ferror-limit 19 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -no-opaque-pointers -fmax-type-align=16 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_080ec.dir/CMakeCCompilerABI.c.o -x c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        clang -cc1 version 13.0.0 based upon LLVM 13.0.0git default target x86_64-unknown-linux-gnu
+        ignoring nonexistent directory "/home/ubuntu/theos/sdks/iPhoneOS15.6.sdk/usr/local/include"
+        ignoring nonexistent directory "/home/ubuntu/theos/sdks/iPhoneOS15.6.sdk/Library/Frameworks"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /home/ubuntu/theos/toolchain/linux/host/lib/clang/13.0.0/include
+         /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk/usr/include
+         /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk/System/Library/Frameworks (framework directory)
+        End of search list.
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_080ec.a && /home/ubuntu/theos/toolchain/linux/iphone/bin/ar qc libcmTC_080ec.a  CMakeFiles/cmTC_080ec.dir/CMakeCCompilerABI.c.o && /home/ubuntu/theos/toolchain/linux/iphone/bin/ranlib libcmTC_080ec.a && :
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/home/ubuntu/theos/toolchain/linux/host/lib/clang/13.0.0/include]
+          add: [/home/ubuntu/theos/sdks/iPhoneOS15.6.sdk/usr/include]
+        end of search list found
+        collapse include dir [/home/ubuntu/theos/toolchain/linux/host/lib/clang/13.0.0/include] ==> [/home/ubuntu/theos/toolchain/linux/host/lib/clang/13.0.0/include]
+        collapse include dir [/home/ubuntu/theos/sdks/iPhoneOS15.6.sdk/usr/include] ==> [/home/ubuntu/theos/sdks/iPhoneOS15.6.sdk/usr/include]
+        implicit include dirs: [/home/ubuntu/theos/toolchain/linux/host/lib/clang/13.0.0/include;/home/ubuntu/theos/sdks/iPhoneOS15.6.sdk/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-9P2fv0']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/ninja -v cmTC_080ec]
+        ignore line: [[1/2] /home/ubuntu/theos/toolchain/linux/iphone/bin/clang-13 --target=arm64-apple-ios15.0   -O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0  -arch arm64 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0   -v -Wl -v -MD -MT CMakeFiles/cmTC_080ec.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_080ec.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_080ec.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [clang version 13.0.0 (https://github.com/apple/llvm-project.git f0fb631dd1a3a2988b23ba5057cd9106713cd0b4)]
+        ignore line: [Target: arm64-apple-ios15.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /home/ubuntu/theos/toolchain/linux/iphone/bin]
+        ignore line: [clang-13: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+        ignore line: [ (in-process)]
+        ignore line: [ "/home/ubuntu/theos/toolchain/linux/host/bin/clang-13" -cc1 -triple arm64-apple-ios15.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=2 -target-sdk-version=15.5 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -target-cpu apple-a7 -target-feature +v8a -target-feature +crypto -target-feature +fp-armv8 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -v -fcoverage-compilation-dir=/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-9P2fv0 -resource-dir /home/ubuntu/theos/toolchain/linux/host/lib/clang/13.0.0 -dependency-file CMakeFiles/cmTC_080ec.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_080ec.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -internal-isystem /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk/usr/local/include -internal-isystem /home/ubuntu/theos/toolchain/linux/host/lib/clang/13.0.0/include -internal-externc-isystem /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk/usr/include -O2 -fdebug-compilation-dir=/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-9P2fv0 -ferror-limit 19 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -no-opaque-pointers -fmax-type-align=16 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_080ec.dir/CMakeCCompilerABI.c.o -x c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [clang -cc1 version 13.0.0 based upon LLVM 13.0.0git default target x86_64-unknown-linux-gnu]
+        ignore line: [ignoring nonexistent directory "/home/ubuntu/theos/sdks/iPhoneOS15.6.sdk/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/home/ubuntu/theos/sdks/iPhoneOS15.6.sdk/Library/Frameworks"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /home/ubuntu/theos/toolchain/linux/host/lib/clang/13.0.0/include]
+        ignore line: [ /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk/usr/include]
+        ignore line: [ /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk/System/Library/Frameworks (framework directory)]
+        ignore line: [End of search list.]
+        ignore line: [[2/2] : && /usr/bin/cmake -E rm -f libcmTC_080ec.a && /home/ubuntu/theos/toolchain/linux/iphone/bin/ar qc libcmTC_080ec.a  CMakeFiles/cmTC_080ec.dir/CMakeCCompilerABI.c.o && /home/ubuntu/theos/toolchain/linux/iphone/bin/ranlib libcmTC_080ec.a && :]
+        ignore line: []
+        ignore line: []
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/CFeatureCheck.cmake:30 (try_compile)"
+      - "cmake/OpusConfig.cmake:27 (c_feature_check)"
+      - "CMakeLists.txt:24 (include)"
+    directories:
+      source: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeTmp"
+      binary: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_COMPILER_TARGET: "arm64-apple-ios15.0"
+      CMAKE_C_FLAGS: "-O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ubuntu/cordial/Vendor/opus/upstream/cmake"
+      CMAKE_OSX_ARCHITECTURES: "arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "15.0"
+      CMAKE_OSX_SYSROOT: "/home/ubuntu/theos/sdks/iPhoneOS15.6.sdk"
+    buildResult:
+      variable: "COMPILE_VLA_SUPPORTED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_4c820
+        [1/2] /home/ubuntu/theos/toolchain/linux/iphone/bin/clang-13 --target=arm64-apple-ios15.0   -O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0  -std=gnu99 -arch arm64 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0 -MD -MT CMakeFiles/cmTC_4c820.dir/vla.c.o -MF CMakeFiles/cmTC_4c820.dir/vla.c.o.d -o CMakeFiles/cmTC_4c820.dir/vla.c.o -c /home/ubuntu/cordial/Vendor/opus/upstream/cmake/vla.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_4c820.a && /home/ubuntu/theos/toolchain/linux/iphone/bin/ar qc libcmTC_4c820.a  CMakeFiles/cmTC_4c820.dir/vla.c.o && /home/ubuntu/theos/toolchain/linux/iphone/bin/ranlib libcmTC_4c820.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "cmake/OpusConfig.cmake:30 (check_include_file)"
+      - "CMakeLists.txt:24 (include)"
+    checks:
+      - "Looking for alloca.h"
+    directories:
+      source: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-FvQcR2"
+      binary: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-FvQcR2"
+    cmakeVariables:
+      CMAKE_C_COMPILER_TARGET: "arm64-apple-ios15.0"
+      CMAKE_C_FLAGS: "-O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ubuntu/cordial/Vendor/opus/upstream/cmake"
+      CMAKE_OSX_ARCHITECTURES: "arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "15.0"
+      CMAKE_OSX_SYSROOT: "/home/ubuntu/theos/sdks/iPhoneOS15.6.sdk"
+    buildResult:
+      variable: "HAVE_ALLOCA_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-FvQcR2'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_e15aa
+        [1/2] /home/ubuntu/theos/toolchain/linux/iphone/bin/clang-13 --target=arm64-apple-ios15.0   -O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0  -std=gnu99 -arch arm64 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0 -MD -MT CMakeFiles/cmTC_e15aa.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_e15aa.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_e15aa.dir/CheckIncludeFile.c.o -c /home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-FvQcR2/CheckIncludeFile.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_e15aa.a && /home/ubuntu/theos/toolchain/linux/iphone/bin/ar qc libcmTC_e15aa.a  CMakeFiles/cmTC_e15aa.dir/CheckIncludeFile.c.o && /home/ubuntu/theos/toolchain/linux/iphone/bin/ranlib libcmTC_e15aa.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "cmake/OpusConfig.cmake:35 (check_symbol_exists)"
+      - "CMakeLists.txt:24 (include)"
+    checks:
+      - "Looking for alloca"
+    directories:
+      source: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-g1PQjT"
+      binary: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-g1PQjT"
+    cmakeVariables:
+      CMAKE_C_COMPILER_TARGET: "arm64-apple-ios15.0"
+      CMAKE_C_FLAGS: "-O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ubuntu/cordial/Vendor/opus/upstream/cmake"
+      CMAKE_OSX_ARCHITECTURES: "arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "15.0"
+      CMAKE_OSX_SYSROOT: "/home/ubuntu/theos/sdks/iPhoneOS15.6.sdk"
+    buildResult:
+      variable: "USE_ALLOCA_SUPPORTED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-g1PQjT'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_bf06e
+        [1/2] /home/ubuntu/theos/toolchain/linux/iphone/bin/clang-13 --target=arm64-apple-ios15.0   -O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0  -std=gnu99 -arch arm64 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0 -MD -MT CMakeFiles/cmTC_bf06e.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_bf06e.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_bf06e.dir/CheckSymbolExists.c.o -c /home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-g1PQjT/CheckSymbolExists.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_bf06e.a && /home/ubuntu/theos/toolchain/linux/iphone/bin/ar qc libcmTC_bf06e.a  CMakeFiles/cmTC_bf06e.dir/CheckSymbolExists.c.o && /home/ubuntu/theos/toolchain/linux/iphone/bin/ranlib libcmTC_bf06e.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "cmake/OpusConfig.cmake:43 (check_library_exists)"
+      - "CMakeLists.txt:24 (include)"
+    checks:
+      - "Looking for floor in m"
+    directories:
+      source: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-3Zya5V"
+      binary: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-3Zya5V"
+    cmakeVariables:
+      CMAKE_C_COMPILER_TARGET: "arm64-apple-ios15.0"
+      CMAKE_C_FLAGS: "-O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ubuntu/cordial/Vendor/opus/upstream/cmake"
+      CMAKE_OSX_ARCHITECTURES: "arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "15.0"
+      CMAKE_OSX_SYSROOT: "/home/ubuntu/theos/sdks/iPhoneOS15.6.sdk"
+    buildResult:
+      variable: "HAVE_LIBM"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-3Zya5V'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_5b4c7
+        [1/2] /home/ubuntu/theos/toolchain/linux/iphone/bin/clang-13 --target=arm64-apple-ios15.0   -O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0 -DCHECK_FUNCTION_EXISTS=floor -std=gnu99 -arch arm64 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0 -MD -MT CMakeFiles/cmTC_5b4c7.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_5b4c7.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_5b4c7.dir/CheckFunctionExists.c.o -c /home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-3Zya5V/CheckFunctionExists.c
+        /home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-3Zya5V/CheckFunctionExists.c:7:3: warning: incompatible redeclaration of library function 'floor' [-Wincompatible-library-redeclaration]
+          CHECK_FUNCTION_EXISTS(void);
+          ^
+        <command line>:1:31: note: expanded from macro 'CHECK_FUNCTION_EXISTS'
+        #define CHECK_FUNCTION_EXISTS floor
+                                      ^
+        /home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-3Zya5V/CheckFunctionExists.c:7:3: note: 'floor' is a builtin with type 'double (double)'
+        <command line>:1:31: note: expanded from macro 'CHECK_FUNCTION_EXISTS'
+        #define CHECK_FUNCTION_EXISTS floor
+                                      ^
+        1 warning generated.
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_5b4c7.a && /home/ubuntu/theos/toolchain/linux/iphone/bin/ar qc libcmTC_5b4c7.a  CMakeFiles/cmTC_5b4c7.dir/CheckFunctionExists.c.o && /home/ubuntu/theos/toolchain/linux/iphone/bin/ranlib libcmTC_5b4c7.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "cmake/OpusConfig.cmake:49 (check_symbol_exists)"
+      - "CMakeLists.txt:24 (include)"
+    checks:
+      - "Looking for lrintf"
+    directories:
+      source: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-2gmGeq"
+      binary: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-2gmGeq"
+    cmakeVariables:
+      CMAKE_C_COMPILER_TARGET: "arm64-apple-ios15.0"
+      CMAKE_C_FLAGS: "-O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ubuntu/cordial/Vendor/opus/upstream/cmake"
+      CMAKE_OSX_ARCHITECTURES: "arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "15.0"
+      CMAKE_OSX_SYSROOT: "/home/ubuntu/theos/sdks/iPhoneOS15.6.sdk"
+    buildResult:
+      variable: "HAVE_LRINTF"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-2gmGeq'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_1259d
+        [1/2] /home/ubuntu/theos/toolchain/linux/iphone/bin/clang-13 --target=arm64-apple-ios15.0   -O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0  -std=gnu99 -arch arm64 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0 -MD -MT CMakeFiles/cmTC_1259d.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_1259d.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_1259d.dir/CheckSymbolExists.c.o -c /home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-2gmGeq/CheckSymbolExists.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_1259d.a && /home/ubuntu/theos/toolchain/linux/iphone/bin/ar qc libcmTC_1259d.a  CMakeFiles/cmTC_1259d.dir/CheckSymbolExists.c.o && /home/ubuntu/theos/toolchain/linux/iphone/bin/ranlib libcmTC_1259d.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "cmake/OpusConfig.cmake:50 (check_symbol_exists)"
+      - "CMakeLists.txt:24 (include)"
+    checks:
+      - "Looking for lrint"
+    directories:
+      source: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-BZkCj5"
+      binary: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-BZkCj5"
+    cmakeVariables:
+      CMAKE_C_COMPILER_TARGET: "arm64-apple-ios15.0"
+      CMAKE_C_FLAGS: "-O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ubuntu/cordial/Vendor/opus/upstream/cmake"
+      CMAKE_OSX_ARCHITECTURES: "arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "15.0"
+      CMAKE_OSX_SYSROOT: "/home/ubuntu/theos/sdks/iPhoneOS15.6.sdk"
+    buildResult:
+      variable: "HAVE_LRINT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-BZkCj5'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_eb49c
+        [1/2] /home/ubuntu/theos/toolchain/linux/iphone/bin/clang-13 --target=arm64-apple-ios15.0   -O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0  -std=gnu99 -arch arm64 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0 -MD -MT CMakeFiles/cmTC_eb49c.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_eb49c.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_eb49c.dir/CheckSymbolExists.c.o -c /home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-BZkCj5/CheckSymbolExists.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_eb49c.a && /home/ubuntu/theos/toolchain/linux/iphone/bin/ar qc libcmTC_eb49c.a  CMakeFiles/cmTC_eb49c.dir/CheckSymbolExists.c.o && /home/ubuntu/theos/toolchain/linux/iphone/bin/ranlib libcmTC_eb49c.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "cmake/OpusConfig.cmake:51 (check_symbol_exists)"
+      - "CMakeLists.txt:24 (include)"
+    checks:
+      - "Looking for elf_aux_info"
+    directories:
+      source: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-6iYRcH"
+      binary: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-6iYRcH"
+    cmakeVariables:
+      CMAKE_C_COMPILER_TARGET: "arm64-apple-ios15.0"
+      CMAKE_C_FLAGS: "-O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ubuntu/cordial/Vendor/opus/upstream/cmake"
+      CMAKE_OSX_ARCHITECTURES: "arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "15.0"
+      CMAKE_OSX_SYSROOT: "/home/ubuntu/theos/sdks/iPhoneOS15.6.sdk"
+    buildResult:
+      variable: "HAVE_ELF_AUX_INFO"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-6iYRcH'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_70335
+        [1/2] /home/ubuntu/theos/toolchain/linux/iphone/bin/clang-13 --target=arm64-apple-ios15.0   -O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0  -std=gnu99 -arch arm64 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0 -MD -MT CMakeFiles/cmTC_70335.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_70335.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_70335.dir/CheckSymbolExists.c.o -c /home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-6iYRcH/CheckSymbolExists.c
+        \x1b[31mFAILED: \x1b[0mCMakeFiles/cmTC_70335.dir/CheckSymbolExists.c.o 
+        /home/ubuntu/theos/toolchain/linux/iphone/bin/clang-13 --target=arm64-apple-ios15.0   -O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0  -std=gnu99 -arch arm64 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0 -MD -MT CMakeFiles/cmTC_70335.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_70335.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_70335.dir/CheckSymbolExists.c.o -c /home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-6iYRcH/CheckSymbolExists.c
+        /home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-6iYRcH/CheckSymbolExists.c:2:10: fatal error: 'sys/auxv.h' file not found
+        #include <sys/auxv.h>
+                 ^~~~~~~~~~~~
+        1 error generated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
+      - "cmake/OpusFunctions.cmake:46 (check_c_compiler_flag)"
+      - "cmake/OpusConfig.cmake:100 (check_flag)"
+      - "CMakeLists.txt:24 (include)"
+    checks:
+      - "Performing Test FAST_MATH_SUPPORTED"
+    directories:
+      source: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-9h7Ugq"
+      binary: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-9h7Ugq"
+    cmakeVariables:
+      CMAKE_C_COMPILER_TARGET: "arm64-apple-ios15.0"
+      CMAKE_C_FLAGS: "-O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ubuntu/cordial/Vendor/opus/upstream/cmake"
+      CMAKE_OSX_ARCHITECTURES: "arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "15.0"
+      CMAKE_OSX_SYSROOT: "/home/ubuntu/theos/sdks/iPhoneOS15.6.sdk"
+    buildResult:
+      variable: "FAST_MATH_SUPPORTED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-9h7Ugq'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_212c9
+        [1/2] /home/ubuntu/theos/toolchain/linux/iphone/bin/clang-13 --target=arm64-apple-ios15.0 -DFAST_MATH_SUPPORTED  -O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0  -std=gnu99 -arch arm64 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0   -ffast-math -MD -MT CMakeFiles/cmTC_212c9.dir/src.c.o -MF CMakeFiles/cmTC_212c9.dir/src.c.o.d -o CMakeFiles/cmTC_212c9.dir/src.c.o -c /home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-9h7Ugq/src.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_212c9.a && /home/ubuntu/theos/toolchain/linux/iphone/bin/ar qc libcmTC_212c9.a  CMakeFiles/cmTC_212c9.dir/src.c.o && /home/ubuntu/theos/toolchain/linux/iphone/bin/ranlib libcmTC_212c9.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
+      - "cmake/OpusFunctions.cmake:46 (check_c_compiler_flag)"
+      - "cmake/OpusConfig.cmake:101 (check_flag)"
+      - "CMakeLists.txt:24 (include)"
+    checks:
+      - "Performing Test STACK_PROTECTOR_SUPPORTED"
+    directories:
+      source: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-Umv9Ek"
+      binary: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-Umv9Ek"
+    cmakeVariables:
+      CMAKE_C_COMPILER_TARGET: "arm64-apple-ios15.0"
+      CMAKE_C_FLAGS: "-O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ubuntu/cordial/Vendor/opus/upstream/cmake"
+      CMAKE_OSX_ARCHITECTURES: "arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "15.0"
+      CMAKE_OSX_SYSROOT: "/home/ubuntu/theos/sdks/iPhoneOS15.6.sdk"
+    buildResult:
+      variable: "STACK_PROTECTOR_SUPPORTED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-Umv9Ek'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_38cae
+        [1/2] /home/ubuntu/theos/toolchain/linux/iphone/bin/clang-13 --target=arm64-apple-ios15.0 -DSTACK_PROTECTOR_SUPPORTED  -O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0  -std=gnu99 -arch arm64 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0   -fstack-protector-strong -MD -MT CMakeFiles/cmTC_38cae.dir/src.c.o -MF CMakeFiles/cmTC_38cae.dir/src.c.o.d -o CMakeFiles/cmTC_38cae.dir/src.c.o -c /home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-Umv9Ek/src.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_38cae.a && /home/ubuntu/theos/toolchain/linux/iphone/bin/ar qc libcmTC_38cae.a  CMakeFiles/cmTC_38cae.dir/src.c.o && /home/ubuntu/theos/toolchain/linux/iphone/bin/ranlib libcmTC_38cae.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
+      - "cmake/OpusFunctions.cmake:46 (check_c_compiler_flag)"
+      - "cmake/OpusConfig.cmake:102 (check_flag)"
+      - "CMakeLists.txt:24 (include)"
+    checks:
+      - "Performing Test HIDDEN_VISIBILITY_SUPPORTED"
+    directories:
+      source: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-RiloW8"
+      binary: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-RiloW8"
+    cmakeVariables:
+      CMAKE_C_COMPILER_TARGET: "arm64-apple-ios15.0"
+      CMAKE_C_FLAGS: "-O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ubuntu/cordial/Vendor/opus/upstream/cmake"
+      CMAKE_OSX_ARCHITECTURES: "arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "15.0"
+      CMAKE_OSX_SYSROOT: "/home/ubuntu/theos/sdks/iPhoneOS15.6.sdk"
+    buildResult:
+      variable: "HIDDEN_VISIBILITY_SUPPORTED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-RiloW8'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_fb080
+        [1/2] /home/ubuntu/theos/toolchain/linux/iphone/bin/clang-13 --target=arm64-apple-ios15.0 -DHIDDEN_VISIBILITY_SUPPORTED  -O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0  -std=gnu99 -arch arm64 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0   -fvisibility=hidden -MD -MT CMakeFiles/cmTC_fb080.dir/src.c.o -MF CMakeFiles/cmTC_fb080.dir/src.c.o.d -o CMakeFiles/cmTC_fb080.dir/src.c.o -c /home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-RiloW8/src.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_fb080.a && /home/ubuntu/theos/toolchain/linux/iphone/bin/ar qc libcmTC_fb080.a  CMakeFiles/cmTC_fb080.dir/src.c.o && /home/ubuntu/theos/toolchain/linux/iphone/bin/ranlib libcmTC_fb080.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
+      - "cmake/OpusConfig.cmake:125 (check_c_compiler_flag)"
+      - "CMakeLists.txt:24 (include)"
+    checks:
+      - "Performing Test Wall_SUPPORTED"
+    directories:
+      source: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-XYmDJI"
+      binary: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-XYmDJI"
+    cmakeVariables:
+      CMAKE_C_COMPILER_TARGET: "arm64-apple-ios15.0"
+      CMAKE_C_FLAGS: "-O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ubuntu/cordial/Vendor/opus/upstream/cmake"
+      CMAKE_OSX_ARCHITECTURES: "arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "15.0"
+      CMAKE_OSX_SYSROOT: "/home/ubuntu/theos/sdks/iPhoneOS15.6.sdk"
+    buildResult:
+      variable: "Wall_SUPPORTED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-XYmDJI'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_2f64d
+        [1/2] /home/ubuntu/theos/toolchain/linux/iphone/bin/clang-13 --target=arm64-apple-ios15.0 -DWall_SUPPORTED  -O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0  -std=gnu99 -arch arm64 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0   -Wall -MD -MT CMakeFiles/cmTC_2f64d.dir/src.c.o -MF CMakeFiles/cmTC_2f64d.dir/src.c.o.d -o CMakeFiles/cmTC_2f64d.dir/src.c.o -c /home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-XYmDJI/src.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_2f64d.a && /home/ubuntu/theos/toolchain/linux/iphone/bin/ar qc libcmTC_2f64d.a  CMakeFiles/cmTC_2f64d.dir/src.c.o && /home/ubuntu/theos/toolchain/linux/iphone/bin/ranlib libcmTC_2f64d.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
+      - "cmake/OpusConfig.cmake:125 (check_c_compiler_flag)"
+      - "CMakeLists.txt:24 (include)"
+    checks:
+      - "Performing Test W_SUPPORTED"
+    directories:
+      source: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-YOEZbr"
+      binary: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-YOEZbr"
+    cmakeVariables:
+      CMAKE_C_COMPILER_TARGET: "arm64-apple-ios15.0"
+      CMAKE_C_FLAGS: "-O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ubuntu/cordial/Vendor/opus/upstream/cmake"
+      CMAKE_OSX_ARCHITECTURES: "arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "15.0"
+      CMAKE_OSX_SYSROOT: "/home/ubuntu/theos/sdks/iPhoneOS15.6.sdk"
+    buildResult:
+      variable: "W_SUPPORTED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-YOEZbr'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_e8a66
+        [1/2] /home/ubuntu/theos/toolchain/linux/iphone/bin/clang-13 --target=arm64-apple-ios15.0 -DW_SUPPORTED  -O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0  -std=gnu99 -arch arm64 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0   -W -MD -MT CMakeFiles/cmTC_e8a66.dir/src.c.o -MF CMakeFiles/cmTC_e8a66.dir/src.c.o.d -o CMakeFiles/cmTC_e8a66.dir/src.c.o -c /home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-YOEZbr/src.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_e8a66.a && /home/ubuntu/theos/toolchain/linux/iphone/bin/ar qc libcmTC_e8a66.a  CMakeFiles/cmTC_e8a66.dir/src.c.o && /home/ubuntu/theos/toolchain/linux/iphone/bin/ranlib libcmTC_e8a66.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
+      - "cmake/OpusConfig.cmake:125 (check_c_compiler_flag)"
+      - "CMakeLists.txt:24 (include)"
+    checks:
+      - "Performing Test Wstrictprototypes_SUPPORTED"
+    directories:
+      source: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-IJOFXg"
+      binary: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-IJOFXg"
+    cmakeVariables:
+      CMAKE_C_COMPILER_TARGET: "arm64-apple-ios15.0"
+      CMAKE_C_FLAGS: "-O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ubuntu/cordial/Vendor/opus/upstream/cmake"
+      CMAKE_OSX_ARCHITECTURES: "arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "15.0"
+      CMAKE_OSX_SYSROOT: "/home/ubuntu/theos/sdks/iPhoneOS15.6.sdk"
+    buildResult:
+      variable: "Wstrictprototypes_SUPPORTED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-IJOFXg'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_c1fbe
+        [1/2] /home/ubuntu/theos/toolchain/linux/iphone/bin/clang-13 --target=arm64-apple-ios15.0 -DWstrictprototypes_SUPPORTED  -O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0  -std=gnu99 -arch arm64 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0   -Wstrict-prototypes -MD -MT CMakeFiles/cmTC_c1fbe.dir/src.c.o -MF CMakeFiles/cmTC_c1fbe.dir/src.c.o.d -o CMakeFiles/cmTC_c1fbe.dir/src.c.o -c /home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-IJOFXg/src.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_c1fbe.a && /home/ubuntu/theos/toolchain/linux/iphone/bin/ar qc libcmTC_c1fbe.a  CMakeFiles/cmTC_c1fbe.dir/src.c.o && /home/ubuntu/theos/toolchain/linux/iphone/bin/ranlib libcmTC_c1fbe.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
+      - "cmake/OpusConfig.cmake:125 (check_c_compiler_flag)"
+      - "CMakeLists.txt:24 (include)"
+    checks:
+      - "Performing Test Wextra_SUPPORTED"
+    directories:
+      source: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-JMDGwP"
+      binary: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-JMDGwP"
+    cmakeVariables:
+      CMAKE_C_COMPILER_TARGET: "arm64-apple-ios15.0"
+      CMAKE_C_FLAGS: "-O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ubuntu/cordial/Vendor/opus/upstream/cmake"
+      CMAKE_OSX_ARCHITECTURES: "arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "15.0"
+      CMAKE_OSX_SYSROOT: "/home/ubuntu/theos/sdks/iPhoneOS15.6.sdk"
+    buildResult:
+      variable: "Wextra_SUPPORTED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-JMDGwP'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_d6969
+        [1/2] /home/ubuntu/theos/toolchain/linux/iphone/bin/clang-13 --target=arm64-apple-ios15.0 -DWextra_SUPPORTED  -O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0  -std=gnu99 -arch arm64 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0   -Wextra -MD -MT CMakeFiles/cmTC_d6969.dir/src.c.o -MF CMakeFiles/cmTC_d6969.dir/src.c.o.d -o CMakeFiles/cmTC_d6969.dir/src.c.o -c /home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-JMDGwP/src.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_d6969.a && /home/ubuntu/theos/toolchain/linux/iphone/bin/ar qc libcmTC_d6969.a  CMakeFiles/cmTC_d6969.dir/src.c.o && /home/ubuntu/theos/toolchain/linux/iphone/bin/ranlib libcmTC_d6969.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
+      - "cmake/OpusConfig.cmake:125 (check_c_compiler_flag)"
+      - "CMakeLists.txt:24 (include)"
+    checks:
+      - "Performing Test Wcastalign_SUPPORTED"
+    directories:
+      source: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-Tst7bz"
+      binary: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-Tst7bz"
+    cmakeVariables:
+      CMAKE_C_COMPILER_TARGET: "arm64-apple-ios15.0"
+      CMAKE_C_FLAGS: "-O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ubuntu/cordial/Vendor/opus/upstream/cmake"
+      CMAKE_OSX_ARCHITECTURES: "arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "15.0"
+      CMAKE_OSX_SYSROOT: "/home/ubuntu/theos/sdks/iPhoneOS15.6.sdk"
+    buildResult:
+      variable: "Wcastalign_SUPPORTED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-Tst7bz'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_b0454
+        [1/2] /home/ubuntu/theos/toolchain/linux/iphone/bin/clang-13 --target=arm64-apple-ios15.0 -DWcastalign_SUPPORTED  -O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0  -std=gnu99 -arch arm64 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0   -Wcast-align -MD -MT CMakeFiles/cmTC_b0454.dir/src.c.o -MF CMakeFiles/cmTC_b0454.dir/src.c.o.d -o CMakeFiles/cmTC_b0454.dir/src.c.o -c /home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-Tst7bz/src.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_b0454.a && /home/ubuntu/theos/toolchain/linux/iphone/bin/ar qc libcmTC_b0454.a  CMakeFiles/cmTC_b0454.dir/src.c.o && /home/ubuntu/theos/toolchain/linux/iphone/bin/ranlib libcmTC_b0454.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
+      - "cmake/OpusConfig.cmake:125 (check_c_compiler_flag)"
+      - "CMakeLists.txt:24 (include)"
+    checks:
+      - "Performing Test Wnestedexterns_SUPPORTED"
+    directories:
+      source: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-KovTQ7"
+      binary: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-KovTQ7"
+    cmakeVariables:
+      CMAKE_C_COMPILER_TARGET: "arm64-apple-ios15.0"
+      CMAKE_C_FLAGS: "-O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ubuntu/cordial/Vendor/opus/upstream/cmake"
+      CMAKE_OSX_ARCHITECTURES: "arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "15.0"
+      CMAKE_OSX_SYSROOT: "/home/ubuntu/theos/sdks/iPhoneOS15.6.sdk"
+    buildResult:
+      variable: "Wnestedexterns_SUPPORTED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-KovTQ7'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_73414
+        [1/2] /home/ubuntu/theos/toolchain/linux/iphone/bin/clang-13 --target=arm64-apple-ios15.0 -DWnestedexterns_SUPPORTED  -O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0  -std=gnu99 -arch arm64 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0   -Wnested-externs -MD -MT CMakeFiles/cmTC_73414.dir/src.c.o -MF CMakeFiles/cmTC_73414.dir/src.c.o.d -o CMakeFiles/cmTC_73414.dir/src.c.o -c /home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-KovTQ7/src.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_73414.a && /home/ubuntu/theos/toolchain/linux/iphone/bin/ar qc libcmTC_73414.a  CMakeFiles/cmTC_73414.dir/src.c.o && /home/ubuntu/theos/toolchain/linux/iphone/bin/ranlib libcmTC_73414.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
+      - "cmake/OpusConfig.cmake:125 (check_c_compiler_flag)"
+      - "CMakeLists.txt:24 (include)"
+    checks:
+      - "Performing Test Wshadow_SUPPORTED"
+    directories:
+      source: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-99faCU"
+      binary: "/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-99faCU"
+    cmakeVariables:
+      CMAKE_C_COMPILER_TARGET: "arm64-apple-ios15.0"
+      CMAKE_C_FLAGS: "-O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ubuntu/cordial/Vendor/opus/upstream/cmake"
+      CMAKE_OSX_ARCHITECTURES: "arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "15.0"
+      CMAKE_OSX_SYSROOT: "/home/ubuntu/theos/sdks/iPhoneOS15.6.sdk"
+    buildResult:
+      variable: "Wshadow_SUPPORTED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-99faCU'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_11f8e
+        [1/2] /home/ubuntu/theos/toolchain/linux/iphone/bin/clang-13 --target=arm64-apple-ios15.0 -DWshadow_SUPPORTED  -O2 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0  -std=gnu99 -arch arm64 -isysroot /home/ubuntu/theos/sdks/iPhoneOS15.6.sdk -miphoneos-version-min=15.0   -Wshadow -MD -MT CMakeFiles/cmTC_11f8e.dir/src.c.o -MF CMakeFiles/cmTC_11f8e.dir/src.c.o.d -o CMakeFiles/cmTC_11f8e.dir/src.c.o -c /home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/CMakeScratch/TryCompile-99faCU/src.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_11f8e.a && /home/ubuntu/theos/toolchain/linux/iphone/bin/ar qc libcmTC_11f8e.a  CMakeFiles/cmTC_11f8e.dir/src.c.o && /home/ubuntu/theos/toolchain/linux/iphone/bin/ranlib libcmTC_11f8e.a && :
+        
+      exitCode: 0
+...

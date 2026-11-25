@@ -1,0 +1,89 @@
+name: Coralcord armv7 IPA matrix
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+    paths:
+      - 'Sources/**'
+      - 'Resources/**'
+      - 'Makefile'
+      - '.github/Workflow/armv7/**'
+      - '.github/workflows/build-armv7.yml'
+
+jobs:
+  linux-x86_64:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Theos, Swift toolchain, and iPhoneOS SDK
+        shell: bash
+        run: |
+          printf 'y\n' | env -u CI bash -c "$(curl -fsSL https://raw.githubusercontent.com/theos/theos/master/bin/install-theos)"
+          echo "THEOS=$HOME/theos" >> "$GITHUB_ENV"
+          echo "$HOME/theos/toolchain/linux/host/bin" >> "$GITHUB_PATH"
+          echo "$HOME/theos/toolchain/linux/iphone/bin" >> "$GITHUB_PATH"
+      - run: bash .github/Workflow/armv7/build-linux.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Coralcord-armv7-Linux-x86_64
+          path: packages/*.ipa
+          if-no-files-found: error
+
+  linux-arm64-host:
+    runs-on: ubuntu-24.04-arm
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Theos, Swift toolchain, and iPhoneOS SDK
+        shell: bash
+        run: |
+          printf 'y\n' | env -u CI bash -c "$(curl -fsSL https://raw.githubusercontent.com/theos/theos/master/bin/install-theos)"
+          echo "THEOS=$HOME/theos" >> "$GITHUB_ENV"
+          echo "$HOME/theos/toolchain/linux/host/bin" >> "$GITHUB_PATH"
+          echo "$HOME/theos/toolchain/linux/iphone/bin" >> "$GITHUB_PATH"
+      - run: bash .github/Workflow/armv7/build-linux-arm64-host.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Coralcord-armv7-Linux-arm64-host
+          path: packages/*.ipa
+          if-no-files-found: error
+
+  macos:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Theos
+        shell: bash
+        run: |
+          brew install dpkg ldid || true
+          printf 'y\n' | env -u CI bash -c "$(curl -fsSL https://raw.githubusercontent.com/theos/theos/master/bin/install-theos)"
+          echo "THEOS=$HOME/theos" >> "$GITHUB_ENV"
+          echo "$HOME/theos/toolchain/darwin/host/bin" >> "$GITHUB_PATH"
+          echo "$HOME/theos/toolchain/darwin/iphone/bin" >> "$GITHUB_PATH"
+      - run: bash .github/Workflow/armv7/build-macos.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Coralcord-armv7-macOS
+          path: packages/*.ipa
+          if-no-files-found: error
+
+  windows-wsl:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v4
+      - uses: Vampire/setup-wsl@v7
+        with:
+          distribution: Ubuntu-24.04
+          update: 'true'
+          additional-packages: git curl perl make clang xz-utils fakeroot dpkg-dev libssl-dev libxml2-dev
+      - name: Install Theos and build inside WSL
+        shell: wsl-bash {0}
+        run: |
+          printf 'y\n' | env -u CI bash -c "$(curl -fsSL https://raw.githubusercontent.com/theos/theos/master/bin/install-theos)"
+          export THEOS="$HOME/theos"
+          bash .github/Workflow/armv7/build-linux.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Coralcord-armv7-Windows-WSL
+          path: packages/*.ipa
+          if-no-files-found: error

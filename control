@@ -1,0 +1,8 @@
+Package: app.coralcord.client
+Name: Coralcord
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: Bilingual iOS client UI prototype
+Maintainer: Coralcord
+Author: Coralcord
+Section: Applications

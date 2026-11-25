@@ -1,0 +1,2 @@
+/* #undef PACKAGE_VERSION */
+#define OPUS_AMBISONICS_MAX_ORDER 5

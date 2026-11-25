@@ -1,0 +1,7 @@
+/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/opus.dir
+/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/edit_cache.dir
+/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/list_install_components.dir
+/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/install.dir
+/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/install/local.dir
+/home/ubuntu/cordial/Vendor/opus/build-ios-arm64/CMakeFiles/install/strip.dir
